@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Ton Nom / Ton Entreprise] - Création de sites web</title>
+  <style>
+    /* Styles basiques et responsive */
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      color: #222;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      gap: 25px;
+      font-weight: 600;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+    .services, .tarifs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+      padding: 25px;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #34495e;
+    }
+    .contact-btn, input[type="submit"] {
+      background: #27ae60;
+      color: white;
+      padding: 12px 22px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .contact-btn:hover, input[type="submit"]:hover {
+      background: #1e8449;
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+    /* Responsive menu */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>[Ton Nom / Nom de ton entreprise]</h1>
+  <p>Création de sites web professionnels, rapides et abordables</p>
+</header>
+
+<nav>
+  <a href="#about">À propos</a>
+  <a href="#services">Services</a>
+  <a href="#tarifs">Tarifs</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+  <!-- À propos -->
+  <section id="about">
+    <h2>À propos de moi</h2>
+    <p>Bonjour ! Je suis [Ton prénom], développeur web passionné. Je propose des solutions adaptées à tous, du site simple à la boutique en ligne, avec une approche claire et professionnelle.</p>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>Mes services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Site vitrine</h3>
+        <p>Présentez votre activité, portfolio ou CV avec un site clair et moderne.</p>
+      </div>
+      <div class="card">
+        <h3>Boutique en ligne</h3>
+        <p>Vendez vos produits facilement avec une boutique simple et sécurisée.</p>
+      </div>
+      <div class="card">
+        <h3>Landing page TikTok/Instagram</h3>
+        <p>Une page d’atterrissage pour regrouper tous vos liens et services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tarifs -->
+  <section id="tarifs">
+    <h2>Tarifs</h2>
+    <div class="tarifs">
+
+      <!-- PACK 1 - STARTER -->
+      <div class="card">
+        <h3>Starter</h3>
+        <p>Page simple avec logo, texte et contact</p>
+        <p><strong>30 €</strong></p>
+
+        <!-- FORMULAIRE PAYPAL PACK STARTER -->
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <!-- 1. Action du formulaire : lien vers PayPal -->
+          <!-- 2. Methode POST -->
+          <!-- 3. Ouvre PayPal dans un nouvel onglet -->
+          <!-- 4. Type d’achat -->
+          <input type="hidden" name="cmd" value="_xclick" />
+          <!-- 5. Email vendeur -->
+          <input type="hidden" name="business" value="tonemail@exemple.com" />
+          <!-- 6. Nom du produit -->
+          <input type="hidden" name="item_name" value="Pack Starter - Page simple" />
+          <!-- 7. Prix -->
+          <input type="hidden" name="amount" value="30.00" />
+          <!-- 8. Devise -->
+          <input type="hidden" name="currency_code" value="EUR" />
+          <!-- 9. Bouton visible -->
+          <input type="submit" value="Payer maintenant" />
+        </form>
+      </div>
+
+      <!-- PACK 2 - STANDARD -->
+      <div class="card">
+        <h3>Standard</h3>
+        <p>Site vitrine complet (3 à 5 pages)</p>
+        <p><strong>80 €</strong></p>
+
+        <!-- FORMULAIRE PAYPAL PACK STANDARD -->
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick" />
+          <input type="hidden" name="business" value="tonemail@exemple.com" />
+          <input type="hidden" name="item_name" value="Pack Standard - Site vitrine" />
+          <input type="hidden" name="amount" value="80.00" />
+          <input type="hidden" name="currency_code" value="EUR" />
+          <input type="submit" value="Payer maintenant" />
+        </form>
+      </div>
+
+      <!-- PACK 3 - PREMIUM -->
+      <div class="card">
+        <h3>Premium</h3>
+        <p>Site e-commerce ou projet sur mesure</p>
+        <p><strong>150 €</strong></p>
+
+        <!-- FORMULAIRE PAYPAL PACK PREMIUM -->
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick" />
+          <input type="hidden" name="business" value="tonemail@exemple.com" />
+          <input type="hidden" name="item_name" value="Pack Premium - Site e-commerce" />
+          <input type="hidden" name="amount" value="150.00" />
+          <input type="hidden" name="currency_code" value="EUR" />
+          <input type="submit" value="Payer maintenant" />
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Tu as un projet ? Contacte-moi par mail ou WhatsApp :</p>
+    <a href="mailto:tonemail@exemple.com" class="contact-btn">📧 Me contacter</a><br /><br />
+    <a href="https://wa.me/33xxxxxxxxx" target="_blank" class="contact-btn">💬 WhatsApp</a>
+  </section>
+  
+</div>
+
+<footer>
+  <p>© 2025 [Ton Nom / Ton Entreprise] - Créé avec ❤️ par [Ton Prénom]</p>
+</footer>
+
+</body>
+</html>
